@@ -1,6 +1,10 @@
+system.time({
 
 
-set.seed( 102191 )
+rm()
+
+
+set.seed( 211007 )
 
 #calcula cuantos encestes logra un jugador con indice de enceste prob
 #haciendo qyt tiros libres
@@ -36,3 +40,4 @@ for( i in 1:10000 ){  #diez mil experimentos
 
 
 print(  primero_ganador )
+})

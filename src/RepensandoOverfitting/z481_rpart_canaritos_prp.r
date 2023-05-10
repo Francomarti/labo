@@ -6,10 +6,10 @@ require("data.table")
 require("rpart")
 require("rpart.plot")
 
-setwd("X:\\gdrive\\austral2023v\\" )  #establezco la carpeta donde voy a trabajar
+setwd("C:/Users/ao7825/Documents/Maestria_MCDV2023/8_Labo2323/datasets" )  #establezco la carpeta donde voy a trabajar
 
 #cargo el dataset
-dataset  <- fread( "./datasets/dataset_pequeno.csv")
+dataset  <- fread( "C:/Users/ao7825/Documents/Maestria_MCDV2023/8_Labo2323/datasets/dataset_pequeno.csv")
 
 dir.create( "./exp/", showWarnings = FALSE  )
 dir.create( "./exp/EA4810/", showWarnings = FALSE )
@@ -29,7 +29,7 @@ modelo  <- rpart(formula= "clase_ternaria ~ .",
                  xval= 0,
                  cp=        -0.82,
                  minsplit= 769,
-                 minbucket=  8,
+                 minbucket=  1000,
                  maxdepth=   6 )
 
 

@@ -1,6 +1,15 @@
+import timeit
+
+
+
+start_time = timeit.default_timer()
+
+
 import  numpy as np
 
-np.random.seed(102191)
+
+np.random.seed(211007)
+
 
 #calcula cuantos encestes logra un jugador con indice de enceste prob
 #haciendo qyt tiros libres
@@ -36,3 +45,7 @@ for i in range(10000): #diez mil experimentos
 
 
 print(primero_ganador)
+
+
+end_time = timeit.default_timer()
+print("Tiempo de ejecución: ", end_time - start_time, "segundos")

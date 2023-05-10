@@ -3,11 +3,12 @@
 #si hay un empate ( dos máximos) se queda con el que esta primero en el vector
 using Random
 
-Random.seed!(102191)
-
+Random.seed!(211007)
+ 
+time(
 function ftirar(prob, qty)
   return   sum( rand() < prob for i in 1:qty )
-end
+end)
 
 
 #defino los jugadores
@@ -31,4 +32,5 @@ for tiros_libres in [ 10, 20, 50, 100, 200, 300, 400, 415, 500, 600, 700, 1000 ]
 
   println( tiros_libres,  "\t", primero_ganador/10000 )
 end
+ 
 

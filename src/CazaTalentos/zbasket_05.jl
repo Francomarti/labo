@@ -1,6 +1,6 @@
 using Random
 
-Random.seed!(102191)
+Random.seed!(211007)
 
 #calcula cuantos encestes logra un jugador con indice de enceste prob
 #que hace qyt tiros libres
@@ -19,7 +19,7 @@ jugadores = fill( 0.7, 100 )
 
 suma_diferencias = 0
 
-for i = 1:10000
+for i = 1:1000000
   vaciertos = ftirar.(jugadores, 100)  #10 tiros libres cada jugador
   mejor = findmax( vaciertos )[2]
   aciertos_torneo = vaciertos[ mejor ] 
@@ -29,4 +29,4 @@ for i = 1:10000
   suma_diferencias += ( aciertos_torneo - aciertos_segunda )
 end
 
-println(  suma_diferencias/10000 )
+println(  suma_diferencias/1000000 )
