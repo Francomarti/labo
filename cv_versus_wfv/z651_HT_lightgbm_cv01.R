@@ -31,9 +31,9 @@ options(error = function() {
 
 #Parametros del script
 PARAM  <- list()
-PARAM$experimento <- "HT6510_cv"
+PARAM$experimento <- "crossvalidation_ht"
 
-PARAM$exp_input  <- "TS6410_cv"
+PARAM$exp_input  <- "crossvalidation_ts"
 
 PARAM$lgb_crossvalidation_folds  <- 5  #En caso que se haga cross validation, se usa esta cantidad de folds
 
